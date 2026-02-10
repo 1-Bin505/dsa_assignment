@@ -5,7 +5,8 @@
 char stack[MAX];
 int top = -1; 
 
-void push(char data) {
+void push(char data) 
+{
     if(top == MAX - 1) {
         printf("Overflow\n");
         return;
@@ -13,7 +14,8 @@ void push(char data) {
     stack[++top] = data;
 }
 
-char pop() {
+char pop() 
+{
     if(top == -1) 
     {
         return '\0'; 
@@ -21,7 +23,8 @@ char pop() {
     return stack[top--];
 }
 
-void parentheses(char *exp) {
+void parentheses(char *exp) 
+{
     top = -1; 
     char ch;
     
@@ -36,31 +39,31 @@ void parentheses(char *exp) {
         {
             if (top == -1) 
             {
-                printf("Result: Unbalanced (Closing '%c' has no opening)\n", ch);
+                printf("Unbalanced (Closing '%c' has no opening)\n", ch);
                 return;
             }
             char popped = pop();
             if((ch == ')' && popped != '(') || (ch == '}' && popped != '{') || (ch == ']' && popped != '[')) 
             {
-                printf("Result: Unbalanced ('%c' mismatches '%c')\n", ch, popped);
+                printf("Unbalanced ('%c' mismatches '%c')\n", ch, popped);
                 return;
             }
         }
     }
     
     if(top == -1) {
-        printf("Result: Balanced\n");
+        printf("Balanced\n");
     } 
     else 
     {
-        printf("Result: Unbalanced (Opening '%c' never closed)\n", stack[top]);
+        printf("Unbalanced (Opening '%c' never closed)\n", stack[top]);
     }
 }
 
 int main() 
 {
     char exp[MAX];
-    printf("Enter any expression with parentheses: ");
+    printf("Enter any expression with parentheses(): ");
     scanf("%s", exp);
     parentheses(exp);
     return 0;

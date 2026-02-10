@@ -70,4 +70,5 @@ The `main()` function is organized as follows:
 ---
 
 ## Sample Output
-
+<img width="297" height="74" alt="Screenshot 2026-02-10 at 8 30 19 PM" src="https://github.com/user-attachments/assets/539f2147-adf8-4d7d-a9b0-4ca6102afc49" />
+<img width="289" height="110" alt="Screenshot 2026-02-10 at 8 30 36 PM" src="https://github.com/user-attachments/assets/00a50bf9-1993-4930-87c5-666e4288a146" />
